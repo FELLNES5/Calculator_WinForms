@@ -46,6 +46,8 @@
             button15 = new Button();
             button16 = new Button();
             button17 = new Button();
+            button18 = new Button();
+            button19 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -172,7 +174,7 @@
             button11.Font = new Font("Segoe UI", 10.2F);
             button11.Location = new Point(210, 107);
             button11.Name = "button11";
-            button11.Size = new Size(86, 60);
+            button11.Size = new Size(40, 60);
             button11.TabIndex = 11;
             button11.Text = "+";
             button11.UseVisualStyleBackColor = true;
@@ -181,9 +183,9 @@
             // button12
             // 
             button12.Font = new Font("Segoe UI", 10.2F);
-            button12.Location = new Point(210, 173);
+            button12.Location = new Point(256, 107);
             button12.Name = "button12";
-            button12.Size = new Size(86, 60);
+            button12.Size = new Size(40, 60);
             button12.TabIndex = 12;
             button12.Text = "-";
             button12.UseVisualStyleBackColor = true;
@@ -192,7 +194,7 @@
             // button13
             // 
             button13.Font = new Font("Segoe UI", 10.2F);
-            button13.Location = new Point(210, 239);
+            button13.Location = new Point(210, 173);
             button13.Name = "button13";
             button13.Size = new Size(40, 60);
             button13.TabIndex = 13;
@@ -203,7 +205,7 @@
             // button14
             // 
             button14.Font = new Font("Segoe UI", 10.2F);
-            button14.Location = new Point(256, 239);
+            button14.Location = new Point(256, 173);
             button14.Name = "button14";
             button14.Size = new Size(40, 60);
             button14.TabIndex = 14;
@@ -244,11 +246,35 @@
             button17.UseVisualStyleBackColor = true;
             button17.Click += Button_Click;
             // 
+            // button18
+            // 
+            button18.Font = new Font("Segoe UI", 10.2F);
+            button18.Location = new Point(210, 239);
+            button18.Name = "button18";
+            button18.Size = new Size(40, 60);
+            button18.TabIndex = 18;
+            button18.Text = "^";
+            button18.UseVisualStyleBackColor = true;
+            button18.Click += Button_Click;
+            // 
+            // button19
+            // 
+            button19.Font = new Font("Segoe UI", 10.2F);
+            button19.Location = new Point(256, 239);
+            button19.Name = "button19";
+            button19.Size = new Size(40, 60);
+            button19.TabIndex = 19;
+            button19.Text = "√";
+            button19.UseVisualStyleBackColor = true;
+            button19.Click += Button_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(312, 380);
+            Controls.Add(button19);
+            Controls.Add(button18);
             Controls.Add(button17);
             Controls.Add(button16);
             Controls.Add(button15);
@@ -293,5 +319,7 @@
         private Button button15;
         private Button button16;
         private Button button17;
+        private Button button18;
+        private Button button19;
     }
 }

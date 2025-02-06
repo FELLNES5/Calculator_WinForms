@@ -57,6 +57,9 @@ namespace Calculator
                                 return;
                             }
                             break;
+                        case '^':
+                            result = Math.Pow(num1, num2);
+                            break;
                     }
                     textBox_Result.Text = result.ToString();
                     input = result.ToString();
@@ -65,7 +68,7 @@ namespace Calculator
                     operation = '\0';
                 }
             }
-            else if (buttonText == "+" || buttonText == "-" || buttonText == "*" || buttonText == "/")
+            else if (buttonText == "+" || buttonText == "-" || buttonText == "*" || buttonText == "/" || buttonText == "^")
             {
                 if (string.IsNullOrEmpty(number1))
                 {
@@ -73,6 +76,20 @@ namespace Calculator
                     operation = char.Parse(buttonText);
                     input = string.Empty;
                     textBox_Result.Text += " " + buttonText + " ";
+                }
+            }
+            else if (buttonText == "√")
+            {
+                if (!string.IsNullOrEmpty(input))
+                {
+                    double num;
+                    double.TryParse(input, out num);
+                    result = Math.Sqrt(num);
+                    textBox_Result.Text = result.ToString();
+                    input = result.ToString();
+                    number1 = string.Empty;
+                    number2 = string.Empty;
+                    operation = '\0';
                 }
             }
             else
